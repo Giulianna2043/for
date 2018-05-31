@@ -1,0 +1,156 @@
+<!-- <html>
+
+<head>
+    <title>Series de Fibonacci</title>
+    <script type="text/javascript">
+        /**
+         * Función que muestra por pantalla los números de fibonacci
+         * Tiene que recibir el numero de sucesiones
+         */
+        function fibonacci(numero) {
+            var var1 = 0;
+            var var2 = 1;
+            var var3;
+
+            document.write(var1 + "");
+            document.write(var2 + "");
+
+            for (var i = 3; i <= numero; i++) {
+                var3 = var1 + var2;
+                var1 = var2;
+                var2 = var3;
+                document.write(var3 + "");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <script type="text/javascript">
+            // Ejecutamos la función pasándole como parámetro el numero 
+            fibonacci(10);
+        </script>
+    </div>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-image: url("http://matesdeprimaria.es/imagenes/series.jpg");
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    h1 {
+        color: red;
+        text-align: center;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    p {
+        color: brown;
+    }
+</style>
+
+<body>
+    <h1>Serie Fibonacci</h1>
+    <div>
+        <p>Escriba el termino</p>
+        <input type="text" id="numero">
+        <button onclick="fibonacci()">Enviar</button>
+
+        <p>
+            El resultado es :
+            <span id="salida"></span>
+            <span id="salida2"></span>
+        </p>
+    </div>
+
+</body>
+<script type="text/javascript">
+    /**
+     * Función que muestra por pantalla los números de fibonacci
+     * Tiene que recibir el numero de sucesiones
+     */
+    function fibonacci() {
+        var var1 = 0;
+        var var2 = 1;
+        var numero = document.getElementById('numero').value;
+        var salida = document.getElementById("salida");
+        var salida2 = document.getElementById("salida2");
+        var var3;
+        salida.innerHTML = var1 + " " + var2 + " "
+        for (var i = 3; i <= numero; i++) {
+            var3 = var1 + var2;
+            var1 = var2;
+            var2 = var3;
+            console.log(var3)
+            salida2.innerHTML += (var3 + " ")
+
+        }
+        limpiar()
+    }
+
+    function limpiar() {
+        console.log("kkk")
+        var numero = document.getElementById('numero');
+        numero.innerHTML = "";
+    }
+</script>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div#output {
+            margin: 100px auto;
+            border: 1px solid orangered;
+            text-align: center;
+            width: 70%;
+            height: 40px;
+            padding: 10px;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output">
+
+    </div>
+    <script> 
+        var resultado = document.getElementById('output');
+        var i,
+            fibo = 1,
+            fibo2 = 1,
+            resultado;
+
+        for (i = 0; i < 15; i++) {
+            // console.log(fibo); 
+            fibo = fibo + fibo2;
+            fibo2 = fibo - fibo2;
+            resultado.innerHTML += ' | ' + fibo;
+        } 
+    </script>
+</body>
+
+</html> -->
